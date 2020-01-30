@@ -1,16 +1,14 @@
 package by.is.lesson.forIterable;
 
-import java.util.*;
+
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ObjectStr objectStorage = new ObjectStr(4);
+        ObjectStorage objectStorage = new ObjectStorage();
         for (Object o : objectStorage) {
-            System.out.println(o.toString());
+            System.out.println(o);
         }
-
-//        https://stackoverflow.com/questions/47066644/how-to-create-a-custom-iterator-in-java
     }
 }

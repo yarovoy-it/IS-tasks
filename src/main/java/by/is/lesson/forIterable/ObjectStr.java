@@ -5,10 +5,10 @@ import java.util.NoSuchElementException;
 
 public class ObjectStr implements Iterable<ObjectStr>{
 
-    public int frstObject;
+    public int firstObject;
 
-    public ObjectStr(int frstObject) {
-        this.frstObject = frstObject;
+    public ObjectStr(int firstObject) {
+        this.firstObject = firstObject;
     }
 
     @Override
@@ -18,14 +18,14 @@ public class ObjectStr implements Iterable<ObjectStr>{
 
             @Override
             public boolean hasNext() {
-                return foo.frstObject < ObjectStr.this.frstObject;
+                return foo.firstObject < ObjectStr.this.firstObject;
             }
 
             @Override
             public ObjectStr next() {
                 if (!hasNext()) throw new NoSuchElementException();
                 ObjectStr cur = foo;
-                foo = new ObjectStr(cur.frstObject + 1);
+                foo = new ObjectStr(cur.firstObject + 1);
                 return cur;
             }
 
@@ -33,13 +33,15 @@ public class ObjectStr implements Iterable<ObjectStr>{
             public void remove() {
 
             }
+
+
         };
     }
 
     @Override
     public String toString() {
         return "ObjectStr{" +
-                "frstObject=" + frstObject +
+                "firstObject=" + firstObject +
                 '}';
     }
 }

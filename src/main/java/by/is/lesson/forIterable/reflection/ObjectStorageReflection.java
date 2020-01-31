@@ -6,20 +6,18 @@ import java.util.Iterator;
 
 public class ObjectStorageReflection implements Iterable {
 
-    public Object firstObject = 3;
+    private Object firstObject = 3;
     public Object secondObject = "123";
     public Object thirdObject = new Object();
 
     private Object[] value() {
-        int countFields = this.getClass().getFields().length;
-        Field[] fields = this.getClass().getFields();
+        Field[] fields = this.getClass().getDeclaredFields();
+        int countFields = fields.length;
         Object[] values = new Object[countFields];
-        for (int index = 0; index <= countFields - 1; index++) {
+        for (int index = 0; index < countFields; index++) {
             try {
-
-                String name = fields[index].getName();
-                values[index] = this.getClass().getField(name).get(this);
-            } catch (IllegalAccessException | NoSuchFieldException e) {
+                values[index] = fields[index].get(this);
+            } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
         }
@@ -32,9 +30,10 @@ public class ObjectStorageReflection implements Iterable {
             private Object[] value = value();
             private int arrSize = value.length;
             private int index = 0;
+
             @Override
             public boolean hasNext() {
-                return arrSize-- != 0;
+                return index < arrSize;
             }
 
             @Override

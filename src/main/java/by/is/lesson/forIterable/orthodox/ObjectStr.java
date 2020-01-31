@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class ObjectStr implements Iterable<Object> {
 
-    public Object firstObject = 3;
+    public Object firstObject = null;
     public Object secondObject = "123";
     public Object thirdObject = new Object();
 

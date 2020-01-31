@@ -1,10 +1,10 @@
-package by.is.lesson.forIterable;
+package by.is.lesson.forIterable.reflection;
 
 import java.lang.reflect.Field;
 import java.util.Iterator;
 
 
-public class ObjectStorage implements Iterable {
+public class ObjectStorageReflection implements Iterable {
 
     public Object firstObject = 3;
     public Object secondObject = "123";

@@ -18,7 +18,7 @@ public class ObjectStorageReflection implements Iterable {
             try {
                 values[index] = fields[index].get(this);
             } catch (IllegalAccessException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e.getMessage());
             }
         }
         return values;
@@ -28,12 +28,14 @@ public class ObjectStorageReflection implements Iterable {
     public Iterator<Object> iterator() {
         Iterator<Object> it = new Iterator<Object>() {
             private Object[] value = value();
-            private int arrSize = value.length;
             private int index = 0;
 
             @Override
             public boolean hasNext() {
-                return index < arrSize;
+                if (index == value.length) {
+                    return false;
+                }
+                return true;
             }
 
             @Override

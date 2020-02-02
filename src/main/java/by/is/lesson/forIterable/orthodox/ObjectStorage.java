@@ -2,7 +2,7 @@ package by.is.lesson.forIterable.orthodox;
 
 import java.util.Iterator;
 
-public class ObjectStr implements Iterable<Object> {
+public class ObjectStorage implements Iterable<Object> {
 
     public Object firstObject = null;
     public Object secondObject = "123";
@@ -16,20 +16,12 @@ public class ObjectStr implements Iterable<Object> {
         this.firstObject = firstObject;
     }
 
-    public boolean hasFirst() {
-        return firstObject != null;
-    }
-
     public Object getSecondObject() {
         return secondObject;
     }
 
     public void setSecondObject(Object secondObject) {
         this.secondObject = secondObject;
-    }
-
-    public boolean hasSecond() {
-        return secondObject != null;
     }
 
     public Object getThirdObject() {
@@ -40,12 +32,16 @@ public class ObjectStr implements Iterable<Object> {
         this.thirdObject = thirdObject;
     }
 
-    public boolean hasThird() {
-        return thirdObject != null;
+    private Object[] load() {
+        Object[] value = new Object[3];
+        value[0] = this.getFirstObject();
+        value[1] = this.getSecondObject();
+        value[2] = this.getThirdObject();
+        return value;
     }
 
     @Override
     public Iterator<Object> iterator() {
-        return new ObjectIterator(this);
+        return new ObjectIterator(this.load());
     }
 }

@@ -5,34 +5,27 @@ import java.util.NoSuchElementException;
 
 public class ObjectIterator implements Iterator<Object> {
 
-    private int count = 0;
-    private ObjectStr obj;
+    private Integer count = 0;
+    private Object[] objects;
 
-    public ObjectIterator(ObjectStr objectStr) {
-        this.obj = objectStr;
-        this.count = 3;
+    public ObjectIterator(Object[] objects) {
+        this.objects = objects;
+
     }
 
     public boolean hasNext() {
-        return count > 0;
+        if (count == objects.length) {
+            return false;
+        }
+        return true;
     }
 
+
     public Object next() throws NoSuchElementException {
-        if (count <= 0) {
+        if (count > objects.length) {
             throw new NoSuchElementException("No more elements in this word!");
         }
-        try {
-            if (count == 3) {
-                return obj.getThirdObject();
-            }
-            if (count == 2) {
-                return obj.getSecondObject();
-            }
-            return obj.getFirstObject();
-        } finally {
-            count--;
-        }
-
+        return objects[count++];
     }
 
     @Override

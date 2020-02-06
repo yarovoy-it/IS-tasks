@@ -8,7 +8,7 @@ public class FolderLoader {
 
     public static List<Folder> load() {
         List<Folder> folders = new ArrayList<>();
-        folders.add(new Folder(1, null, "fundamental"));
+        folders.add(new Folder(1, 0, "fundamental"));
         folders.add(new Folder(2, 1, "2firstGeneration"));
         folders.add(new Folder(4, 2, "4SecondGeneration"));
         folders.add(new Folder(5, 2, "5SecondGeneration"));

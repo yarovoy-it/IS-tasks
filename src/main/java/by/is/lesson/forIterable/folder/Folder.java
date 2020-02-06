@@ -64,4 +64,14 @@ public class Folder {
     public void setChildFolder(List<Folder> childFolder) {
         this.childFolder = childFolder;
     }
+
+    @Override
+    public String toString() {
+        return "Folder{" +
+                "id=" + id +
+                ", parentId=" + parentId +
+                ", name='" + name + '\'' +
+                ", childFolder=" + childFolder +
+                '}';
+    }
 }

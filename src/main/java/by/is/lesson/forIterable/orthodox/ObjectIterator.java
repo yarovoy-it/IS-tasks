@@ -20,7 +20,6 @@ public class ObjectIterator implements Iterator<Object> {
         return true;
     }
 
-
     public Object next() throws NoSuchElementException {
         if (count > objects.length) {
             throw new NoSuchElementException("No more elements in this word!");

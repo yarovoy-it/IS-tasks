@@ -18,7 +18,7 @@ public class ObjectStorageReflection implements Iterable {
             try {
                 values[index] = fields[index].get(this);
             } catch (IllegalAccessException e) {
-                throw new RuntimeException(e.getMessage());
+                throw new IllegalArgumentException("We have some problem please contact with administrator");
             }
         }
         return values;

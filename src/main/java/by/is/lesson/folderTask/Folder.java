@@ -1,4 +1,4 @@
-package by.is.lesson.forIterable.folder;
+package by.is.lesson.folderTask;
 
 import java.util.List;
 

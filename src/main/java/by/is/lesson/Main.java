@@ -1,14 +1,19 @@
 package by.is.lesson;
 
 
-import by.is.lesson.folderTask.FolderUtil;
-
 public class Main {
 
 
     public static void main(String[] args) {
 
-        System.out.println(FolderUtil.singleLoop(3));
+
+//        List<Folder> fullHouse = aggregate(load());
+//        System.out.print(fullHouse);
+
+//        Map<Integer, Folder> idAndFolders = new HashMap<>();
+//        for (Folder folder: load()) {
+//            Integer fatherId = folder.getParentId();
+//        }
 
 //        ObjectStorageReflection objectStorageRef = new ObjectStorageReflection();
 //        for (Object o : objectStorageRef) {

@@ -1,12 +1,30 @@
 package by.is.lesson.folderTask;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FolderUtil {
 
+    public static List<Folder> aggregate(List<Folder> list) {
+        Map<Integer, List<Folder>> map = list
+                .stream()
+                .collect(
+                        Collectors.groupingBy(Folder::getParentId,
+                                Collectors.mapping(Function.identity(),
+                                        Collectors.toList())));
+        return combineTreeStructure(map, list);
+    }
+
+    private static List<Folder> combineTreeStructure(Map<Integer, List<Folder>> map, List<Folder> list) {
+        return list
+                .stream()
+                .peek(folder -> folder
+                        .setChildFolder(map.get(folder.getId())))
+                .collect(Collectors.toList());
+    }
+
     public static Map<Folder, List<Folder>> getRelationship(Folder father) {
-        //dont like this realisation
         Map<Folder, List<Folder>> family = new HashMap<>();
         List<Folder> children = FolderLoader.load()
                 .stream()
@@ -49,16 +67,6 @@ public class FolderUtil {
         }
         return family;
     }
-
-    public static Folder treeFolder() {
-        for (Folder folder : FolderLoader.load()) {
-
-        }
-
-        return null;
-    }
-
-
 }
 
 

@@ -15,22 +15,10 @@ public class Folder {
     public Folder() {
     }
 
-    public Folder(Integer id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public Folder(Integer id, Integer parentId, String name) {
         this.id = id;
         this.parentId = parentId;
         this.name = name;
-    }
-
-    public Folder(Integer id, Integer parentId, String name, List<Folder> childFolder) {
-        this.id = id;
-        this.parentId = parentId;
-        this.name = name;
-        this.childFolder = childFolder;
     }
 
     public Integer getId() {

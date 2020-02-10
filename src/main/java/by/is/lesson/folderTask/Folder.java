@@ -55,11 +55,12 @@ public class Folder {
 
     @Override
     public String toString() {
-        return "Folder{" +
-                "id=" + id +
-                ", parentId=" + parentId +
-                ", name='" + name + '\'' +
-                ", childFolder=" + childFolder +
-                '}';
+        return name;
+//                "Folder{" +
+//                "id=" + id +
+//                ", parentId=" + parentId +
+//                ", name='" + name + '\'' +
+////                ", childFolder=" + childFolder +
+//                '}';
     }
 }

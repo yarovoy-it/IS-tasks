@@ -21,6 +21,7 @@ public class FolderUtil {
                 .stream()
                 .peek(folder -> folder
                         .setChildFolder(map.get(folder.getId())))
+                .filter(folder -> Objects.equals(folder.getParentId(), 0))
                 .collect(Collectors.toList());
     }
 

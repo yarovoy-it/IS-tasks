@@ -10,7 +10,6 @@ import static by.is.lesson.folderTask.FolderUtil.aggregate;
 
 public class Main {
 
-
     public static void printer(List<Folder> folders, String s) {
         String space = s;
         for (Folder folder : folders) {
@@ -26,18 +25,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-
 //      List<Folder> fullHouse = aggregate(load());
         Main m = new Main();
         printer(aggregate(load()), "");
 //        System.out.println(aggregate(load()));
 
-
 //        Map<Integer, Folder> idAndFolders = new HashMap<>();
 //        for (Folder folder: load()) {
 //            Integer fatherId = folder.getParentId();
 //        }
-
 //        ObjectStorageReflection objectStorageRef = new ObjectStorageReflection();
 //        for (Object o : objectStorageRef) {
 //            System.out.println(o);
@@ -50,8 +46,6 @@ public class Main {
 
 
     }
-
-
 }
 
 

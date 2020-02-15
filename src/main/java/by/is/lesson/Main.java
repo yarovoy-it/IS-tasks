@@ -25,15 +25,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-//      List<Folder> fullHouse = aggregate(load());
-        Main m = new Main();
-        printer(aggregate(load()), "");
-//        System.out.println(aggregate(load()));
+
+//        List<Folder> fullHouse = aggregate(load());
+//        System.out.print(fullHouse);
 
 //        Map<Integer, Folder> idAndFolders = new HashMap<>();
 //        for (Folder folder: load()) {
 //            Integer fatherId = folder.getParentId();
 //        }
+
 //        ObjectStorageReflection objectStorageRef = new ObjectStorageReflection();
 //        for (Object o : objectStorageRef) {
 //            System.out.println(o);
@@ -46,6 +46,8 @@ public class Main {
 
 
     }
+
+
 }
 
 

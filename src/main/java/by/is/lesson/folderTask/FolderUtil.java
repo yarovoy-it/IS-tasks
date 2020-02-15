@@ -6,6 +6,27 @@ import java.util.stream.Collectors;
 
 public class FolderUtil {
 
+    public static Folder aggregateSingle(List<Folder> list) {
+        Map<Integer, Folder> map = new HashMap<>();
+        for (int i = 0; i < list.size(); i++) {
+            Folder temp = list.get(i);
+            map.put(temp.getId(), temp);
+            if (map.get(temp.getParentId()) == null) {
+                map.put(temp.getParentId(), temp);
+            }
+            Folder fromMap = map.get(temp.getParentId());
+            List<Folder>list1 = map.get(temp.getParentId()).getChildFolder();
+            if (list1 == null) {
+                list1 = new ArrayList<>();
+                fromMap.setChildFolder(list1);
+            }
+            list1.add(temp);
+            System.out.println(list1);
+        }
+        Folder collected = map.get(0);
+        return null;
+    }
+
     public static List<Folder> aggregate(List<Folder> list) {
         Map<Integer, List<Folder>> map = list
                 .stream()

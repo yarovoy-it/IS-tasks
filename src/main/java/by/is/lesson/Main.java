@@ -3,10 +3,8 @@ package by.is.lesson;
 
 import by.is.lesson.folderTask.Folder;
 
+import java.io.IOException;
 import java.util.List;
-
-import static by.is.lesson.folderTask.FolderLoader.load;
-import static by.is.lesson.folderTask.FolderUtil.aggregate;
 
 public class Main {
 
@@ -26,6 +24,8 @@ public class Main {
     public static void main(String[] args) {
 
 
+    }
+}
 //        List<Folder> fullHouse = aggregate(load());
 //        System.out.print(fullHouse);
 
@@ -45,10 +45,10 @@ public class Main {
 //        }
 
 
-    }
 
 
-}
+
+
 
 
 

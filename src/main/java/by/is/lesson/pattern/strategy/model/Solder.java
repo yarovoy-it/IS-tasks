@@ -1,12 +1,18 @@
 package by.is.lesson.pattern.strategy.model;
 
+import by.is.lesson.pattern.strategy.logic.AttackStrategy;
+import by.is.lesson.pattern.strategy.logic.MoveStrategy;
+import by.is.lesson.pattern.strategy.logic.SayStrategy;
+
 public abstract class Solder {
 
     private Long id;
 
-    private Double attack;
+    private AttackStrategy attackStrategy;
 
-    private Integer move;
+    private MoveStrategy moveStrategy;
+
+    private SayStrategy sayStrategy;
 
     public Long getId() {
         return id;
@@ -16,19 +22,39 @@ public abstract class Solder {
         this.id = id;
     }
 
-    public Double getAttack() {
-        return attack;
+    public AttackStrategy getAttackStrategy() {
+        return attackStrategy;
     }
 
-    public void setAttack(Double attack) {
-        this.attack = attack;
+    public void setAttackStrategy(AttackStrategy attackStrategy) {
+        this.attackStrategy = attackStrategy;
     }
 
-    public Integer getMove() {
-        return move;
+    public MoveStrategy getMoveStrategy() {
+        return moveStrategy;
     }
 
-    public void setMove(Integer move) {
-        this.move = move;
+    public void setMoveStrategy(MoveStrategy moveStrategy) {
+        this.moveStrategy = moveStrategy;
+    }
+
+    public SayStrategy getSayStrategy() {
+        return sayStrategy;
+    }
+
+    public void setSayStrategy(SayStrategy sayStrategy) {
+        this.sayStrategy = sayStrategy;
+    }
+
+    public String attack() {
+        return this.attackStrategy.attack();
+    }
+
+    public String move() {
+        return this.moveStrategy.move();
+    }
+
+    public String say() {
+        return this.sayStrategy.say();
     }
 }

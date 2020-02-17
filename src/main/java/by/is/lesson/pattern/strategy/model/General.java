@@ -1,17 +1,17 @@
 package by.is.lesson.pattern.strategy.model;
 
-import by.is.lesson.pattern.strategy.logic.impl.attack.NotAttackStratageImpl;
+import by.is.lesson.pattern.strategy.logic.impl.attack.NotAttackStrategyImpl;
 import by.is.lesson.pattern.strategy.logic.impl.move.WalkMoveStrategyImpl;
-import by.is.lesson.pattern.strategy.logic.impl.say.OrderSayStrategyImpl;
+import by.is.lesson.pattern.strategy.logic.impl.say.CommandSayStrategyImpl;
 
 public class General extends Solder {
 
     private String order;
 
     public General() {
-        setAttackStrategy(new NotAttackStratageImpl());
+        setAttackStrategy(new NotAttackStrategyImpl());
         setMoveStrategy(new WalkMoveStrategyImpl());
-        setSayStrategy(new OrderSayStrategyImpl());
+        setSayStrategy(new CommandSayStrategyImpl());
     }
 
     public String getOrder() {

@@ -3,6 +3,9 @@ package by.is.lesson.pattern.strategy.logic.impl.attack;
 import by.is.lesson.pattern.strategy.logic.AttackStrategy;
 import by.is.lesson.pattern.strategy.logic.MoveStrategy;
 
+/**
+ * They can attack by bow.
+ */
 public class BowAttackStrategyImpl implements AttackStrategy {
     @Override
     public String attack() {

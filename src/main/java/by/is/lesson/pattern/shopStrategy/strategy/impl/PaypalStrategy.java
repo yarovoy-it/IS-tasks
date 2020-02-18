@@ -1,4 +1,6 @@
-package by.is.lesson.pattern.shopStrategy;
+package by.is.lesson.pattern.shopStrategy.strategy.impl;
+
+import by.is.lesson.pattern.shopStrategy.strategy.PaymentStrategy;
 
 public class PaypalStrategy implements PaymentStrategy {
 

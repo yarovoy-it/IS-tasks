@@ -14,6 +14,19 @@ public abstract class Solder {
 
     private SayStrategy sayStrategy;
 
+    public String attack() {
+        return this.attackStrategy.attack();
+    }
+
+    public String move() {
+        return this.moveStrategy.move();
+    }
+
+    public String say() {
+        return this.sayStrategy.say();
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -46,15 +59,5 @@ public abstract class Solder {
         this.sayStrategy = sayStrategy;
     }
 
-    public String attack() {
-        return this.attackStrategy.attack();
-    }
 
-    public String move() {
-        return this.moveStrategy.move();
-    }
-
-    public String say() {
-        return this.sayStrategy.say();
-    }
 }

@@ -1,4 +1,4 @@
-package by.is.lesson.pattern.shopStrategy;
+package by.is.lesson.pattern.shopStrategy.model;
 
 public class Item {
 

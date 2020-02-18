@@ -1,5 +1,10 @@
 package by.is.lesson.pattern.shopStrategy;
 
+import by.is.lesson.pattern.shopStrategy.model.Item;
+import by.is.lesson.pattern.shopStrategy.model.ShoppingCart;
+import by.is.lesson.pattern.shopStrategy.strategy.impl.CreditCardStrategy;
+import by.is.lesson.pattern.shopStrategy.strategy.impl.PaypalStrategy;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -12,10 +17,7 @@ public class Runner {
         cart.addItem(item1);
         cart.addItem(item2);
 
-        //pay by paypal
         cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
-
-        //pay by credit card
         cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
     }
 }

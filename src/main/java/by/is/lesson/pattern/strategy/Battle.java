@@ -1,5 +1,6 @@
 package by.is.lesson.pattern.strategy;
 
+import by.is.lesson.pattern.strategy.logic.impl.move.WalkMoveStrategyImpl;
 import by.is.lesson.pattern.strategy.model.Archer;
 import by.is.lesson.pattern.strategy.model.General;
 import by.is.lesson.pattern.strategy.model.Musketeer;
@@ -20,6 +21,8 @@ public class Battle {
         System.out.println(a.attack());
         System.out.println(a.move());
         System.out.println(a.say());
+        a.setMoveStrategy(new WalkMoveStrategyImpl());
+        System.out.println(a.move());
         System.out.println("-------Destroy archer \n");
 
         System.out.println("-------Create general");

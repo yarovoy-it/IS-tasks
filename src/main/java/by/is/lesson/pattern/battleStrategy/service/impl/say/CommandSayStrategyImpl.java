@@ -1,6 +1,6 @@
-package by.is.lesson.pattern.strategy.logic.impl.say;
+package by.is.lesson.pattern.battleStrategy.service.impl.say;
 
-import by.is.lesson.pattern.strategy.logic.SayStrategy;
+import by.is.lesson.pattern.battleStrategy.service.SayStrategy;
 
 /**
  * For soldiers how can command

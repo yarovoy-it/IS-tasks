@@ -1,4 +1,4 @@
-package by.is.lesson.pattern.strategy.logic;
+package by.is.lesson.pattern.battleStrategy.service;
 
 public interface SayStrategy {
 

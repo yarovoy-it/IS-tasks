@@ -17,7 +17,10 @@ public class Runner {
         cart.addItem(item1);
         cart.addItem(item2);
 
-        cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
-        cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
+        cart.pay();
+
+
+//        cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
+//        cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
     }
 }

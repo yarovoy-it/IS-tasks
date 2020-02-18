@@ -1,8 +1,8 @@
-package by.is.lesson.pattern.strategy.model;
+package by.is.lesson.pattern.battleStrategy.model;
 
-import by.is.lesson.pattern.strategy.logic.impl.say.SilenceSayStrategyImpl;
-import by.is.lesson.pattern.strategy.logic.impl.attack.SwordAttackStrategyImpl;
-import by.is.lesson.pattern.strategy.logic.impl.move.WalkMoveStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.say.SilenceSayStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.attack.SwordAttackStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.move.WalkMoveStrategyImpl;
 
 public class Warrior extends Solder {
 

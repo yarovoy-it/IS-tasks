@@ -1,6 +1,6 @@
-package by.is.lesson.pattern.strategy.logic.impl.move;
+package by.is.lesson.pattern.battleStrategy.service.impl.move;
 
-import by.is.lesson.pattern.strategy.logic.MoveStrategy;
+import by.is.lesson.pattern.battleStrategy.service.MoveStrategy;
 
 /**
  * Strategy, for walking soldiers.

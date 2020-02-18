@@ -1,8 +1,8 @@
-package by.is.lesson.pattern.strategy.model;
+package by.is.lesson.pattern.battleStrategy.model;
 
-import by.is.lesson.pattern.strategy.logic.AttackStrategy;
-import by.is.lesson.pattern.strategy.logic.MoveStrategy;
-import by.is.lesson.pattern.strategy.logic.SayStrategy;
+import by.is.lesson.pattern.battleStrategy.service.AttackStrategy;
+import by.is.lesson.pattern.battleStrategy.service.MoveStrategy;
+import by.is.lesson.pattern.battleStrategy.service.SayStrategy;
 
 public abstract class Solder {
 

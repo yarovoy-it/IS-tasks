@@ -1,6 +1,7 @@
 package by.is.lesson.pattern.shopStrategy.model;
 
 import by.is.lesson.pattern.shopStrategy.strategy.PaymentStrategy;
+import by.is.lesson.pattern.shopStrategy.strategy.impl.CreditCardStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +10,19 @@ public class ShoppingCart {
 
     List<Item> items;
 
+    PaymentStrategy paymentStrategy;
+
     public ShoppingCart() {
+        setPaymentStrategy(new CreditCardStrategy());
         this.items = new ArrayList<Item>();
+    }
+
+    public PaymentStrategy getPaymentStrategy() {
+        return paymentStrategy;
+    }
+
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
     }
 
     public void addItem(Item item) {
@@ -21,16 +33,7 @@ public class ShoppingCart {
         this.items.remove(item);
     }
 
-    public int calculateTotal() {
-        int sum = 0;
-        for (Item item : items) {
-            sum += item.getPrice();
-        }
-        return sum;
-    }
-
-    public void pay(PaymentStrategy paymentMethod) {
-        int amount = calculateTotal();
-        paymentMethod.pay(amount);
+    public void pay() {
+        this.paymentStrategy.pay();
     }
 }

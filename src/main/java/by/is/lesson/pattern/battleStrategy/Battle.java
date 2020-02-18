@@ -1,10 +1,10 @@
-package by.is.lesson.pattern.strategy;
+package by.is.lesson.pattern.battleStrategy;
 
-import by.is.lesson.pattern.strategy.logic.impl.move.WalkMoveStrategyImpl;
-import by.is.lesson.pattern.strategy.model.Archer;
-import by.is.lesson.pattern.strategy.model.General;
-import by.is.lesson.pattern.strategy.model.Musketeer;
-import by.is.lesson.pattern.strategy.model.Warrior;
+import by.is.lesson.pattern.battleStrategy.service.impl.move.WalkMoveStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.model.Archer;
+import by.is.lesson.pattern.battleStrategy.model.General;
+import by.is.lesson.pattern.battleStrategy.model.Musketeer;
+import by.is.lesson.pattern.battleStrategy.model.Warrior;
 
 public class Battle {
 

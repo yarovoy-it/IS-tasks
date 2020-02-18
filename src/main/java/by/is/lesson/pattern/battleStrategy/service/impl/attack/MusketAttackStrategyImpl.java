@@ -1,6 +1,6 @@
-package by.is.lesson.pattern.strategy.logic.impl.attack;
+package by.is.lesson.pattern.battleStrategy.service.impl.attack;
 
-import by.is.lesson.pattern.strategy.logic.AttackStrategy;
+import by.is.lesson.pattern.battleStrategy.service.AttackStrategy;
 
 /**
  * They can attack by guns.

@@ -1,8 +1,8 @@
-package by.is.lesson.pattern.strategy.model;
+package by.is.lesson.pattern.battleStrategy.model;
 
-import by.is.lesson.pattern.strategy.logic.impl.attack.BowAttackStrategyImpl;
-import by.is.lesson.pattern.strategy.logic.impl.move.ImmobileMoveStrategyImpl;
-import by.is.lesson.pattern.strategy.logic.impl.say.SilenceSayStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.attack.BowAttackStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.move.ImmobileMoveStrategyImpl;
+import by.is.lesson.pattern.battleStrategy.service.impl.say.SilenceSayStrategyImpl;
 
 public class Archer extends Solder {
 

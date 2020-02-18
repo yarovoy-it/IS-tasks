@@ -8,19 +8,6 @@ import java.util.List;
 
 public class Main {
 
-    public static void printer(List<Folder> folders, String s) {
-        String space = s;
-        for (Folder folder : folders) {
-            System.out.println(space + folder);
-            if (folder.getChildFolder() != null) {
-                space += "    ";
-                printer(folder.getChildFolder(), space);
-                space = space.substring(0, space.length() - 4);
-            }
-
-        }
-    }
-
     public static void main(String[] args) {
 
 

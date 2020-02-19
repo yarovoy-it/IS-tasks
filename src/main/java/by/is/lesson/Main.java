@@ -19,7 +19,7 @@ public class Main {
         arrayByte[1] = 7;
         arrayByte[2] = 9;
         arrayByte[3] = 14;
-        arrayByte[4] = 25;
+        arrayByte[4] = 127;
         arrayByte[5] = 24;
         arrayByte[6] = 15;
         arrayByte[7] = 1;
@@ -27,7 +27,7 @@ public class Main {
         arrayByte[9] = 35;
 
 
-        System.out.println(defineBiggestValue(arrayByte,0));
+        System.out.println(defineBiggestValue(arrayByte));
 
     }
 }

@@ -1,21 +1,22 @@
 package by.is.lesson.matrix;
 
-import java.util.Arrays;
+import static by.is.lesson.matrix.BuildArray.buildPyramidArray;
+import static by.is.lesson.matrix.PrintArray.printArray;
+import static by.is.lesson.matrix.PrintArray.printArrayUpend;
 
-import static by.is.lesson.matrix.PrintArray.collectPyramidStructure;
 
 public class Runner {
 
     public static void main(String[] args) {
 
-        int[][] array = new int[7][7];
+        int[][] array = buildPyramidArray(4, 6);
+        printArray(array);
+        printArrayUpend(array);
 
+//        for (int[] tempArray : buildArrayPyramidStructure(array)) {
+//            System.out.println(Arrays.toString(tempArray));
+//        }
 
-        StringBuilder sb2 = new StringBuilder();
-        for (int[] tempArray : collectPyramidStructure(array)) {
-            sb2.append(Arrays.toString(tempArray)).append('\n');
-        }
-        System.out.println(sb2);
 
     }
 

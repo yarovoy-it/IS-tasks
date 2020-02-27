@@ -13,16 +13,16 @@ public class BuildArray {
      * 0 1 1 1 1 1 0
      * 0 0 0 0 0 0 0
      *
-     * @param rowSize
-     * @param columnSize
+     * @param rowSize    number of row
+     * @param columnSize number of column
      * @return full array numbers
      */
     public static int[][] buildPyramidArray(int rowSize, int columnSize) {
+        int tempValueColumn = 0;
+        int tempValueRow = 0;
         int[][] array = new int[rowSize][columnSize];
         for (int row = 0; row < rowSize; row++) {
             for (int column = 0; column < columnSize; column++) {
-                int tempValueColumn = 0;
-                int tempValueRow = 0;
                 if (row < rowSize / 2) {
                     tempValueRow = row;
                 } else {

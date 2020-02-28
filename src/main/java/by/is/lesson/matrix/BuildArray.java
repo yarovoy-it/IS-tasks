@@ -3,7 +3,7 @@ package by.is.lesson.matrix;
 public class BuildArray {
 
     /**
-     * Method filling up array, as pyramid structure
+     * Method filling up array, as pyramid structure. One by one cell
      * <p>
      * 0 0 0 0 0 0 0
      * 0 1 1 1 1 1 0
@@ -17,9 +17,9 @@ public class BuildArray {
      * @param columnSize number of column
      * @return full array numbers
      */
-    public static int[][] buildPyramidArray(int rowSize, int columnSize) {
-        int tempValueColumn = 0;
-        int tempValueRow = 0;
+    public static int[][] buildPyramidArrayСonsistently(int rowSize, int columnSize) {
+        int tempValueColumn;
+        int tempValueRow;
         int[][] array = new int[rowSize][columnSize];
         for (int row = 0; row < rowSize; row++) {
             for (int column = 0; column < columnSize; column++) {
@@ -34,6 +34,34 @@ public class BuildArray {
                     tempValueColumn = columnSize - 1 - column;
                 }
                 array[row][column] = Math.min(tempValueColumn, tempValueRow);
+            }
+        }
+        return array;
+    }
+
+    /**
+     * Method filling up array, as pyramid structure.
+     * Separating array on four part then defined value for top left part  and setting them on other piece.
+     * <p>
+     * 0 0 | 0 0
+     * 0 1 | 1 0
+     * ----------
+     * 0 1 | 1 0
+     * 0 0 | 0 0
+     *
+     * @param rowSize    number of row
+     * @param columnSize number of column
+     * @return full array numbers
+     */
+    public static int[][] buildPyramidBySeparate(int rowSize, int columnSize) {
+        int[][] array = new int[rowSize][columnSize];
+        for (int row = 1; row < rowSize / 2; row++) {
+            for (int column = 1; column < columnSize / 2; column++) {
+                int currentValue = Math.min(row, column);
+                array[row][column] = currentValue;
+                array[rowSize - 1 - row][column] = currentValue;
+                array[row][columnSize - 1 - column] = currentValue;
+                array[rowSize - 1 - row][columnSize - 1 - column] = currentValue;
             }
         }
         return array;

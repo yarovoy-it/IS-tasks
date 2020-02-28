@@ -54,9 +54,11 @@ public class BuildArray {
      * @return full array numbers
      */
     public static int[][] buildPyramidBySeparate(int rowSize, int columnSize) {
+        int rows = rowSize % 2 == 0 ? rowSize / 2 : (rowSize / 2)+1;
+        int columns = columnSize % 2 == 0 ? columnSize / 2 : (columnSize / 2)+1;
         int[][] array = new int[rowSize][columnSize];
-        for (int row = 1; row < rowSize / 2; row++) {
-            for (int column = 1; column < columnSize / 2; column++) {
+        for (int row = 1; row < rows; row++) {
+            for (int column = 1; column < columns; column++) {
                 int currentValue = Math.min(row, column);
                 array[row][column] = currentValue;
                 array[rowSize - 1 - row][column] = currentValue;

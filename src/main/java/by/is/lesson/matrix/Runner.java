@@ -8,7 +8,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[][] array = buildPyramidBySeparate(6, 6);
+        int[][] array = buildPyramidBySeparate(5, 7);
 
         printArray(array);
 

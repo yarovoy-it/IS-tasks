@@ -1,0 +1,8 @@
+INTEXSOFT:
+  login: vitalii.sergey
+  oauthToken: 6fa8be1ed624b5404afff748fa5870bf
+  url: https://jira.intexsoft.com/
+OUTCODE:
+  login: denis.taras
+  oauthToken: 0d308b765e41cf6fb30af33b22cdfb78
+  url: https://myteam.aeroclub.ru

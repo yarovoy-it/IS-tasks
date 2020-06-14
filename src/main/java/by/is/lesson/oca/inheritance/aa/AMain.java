@@ -8,5 +8,8 @@ public class AMain {
         a = aa;
         aa = (AA) a;
 
+        AA a2 = new AA();
+        System.out.println(a2.a);
+
     }
 }

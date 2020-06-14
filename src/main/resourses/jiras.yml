@@ -1,0 +1,47 @@
+INTEXSOFT:
+  login: vitalii.sergey
+  oauthToken: 6fa8be1ed624b5404afff748fa5870bf
+  url: https://jira.intexsoft.com/
+OUTCODE:
+  login: denis.taras
+  oauthToken: 0d308b765e41cf6fb30af33b22cdfb78
+  url: "https://myteam.aeroclub.ru"
+
+#Humans(POS):
+#  url: "https://humansinc.atlassian.net/"
+#  login: "vzhuk@humans.net"
+#  oauthToken: "8bdcbee02a14a7a6511debffed0e3bd8a20a830c6e8158e46d75fd34684e6273"
+#  customerAccount: "HUM"
+#  idCustomerAccount: "67"
+#  type: "ATLASSIAN"
+#  individual: true
+#  transitions: "61,201"
+#Humans(Grigory):
+#  url: "https://humansinc.atlassian.net/"
+#  login: "gsupcarel@humans.net"
+#  oauthToken: "add669eb1017efef9820bd2f48f4454171bedaa41d506d3dc86680f53e4bf894"
+#  customerAccount: "HUM"
+#  idCustomerAccount: "67"
+#  type: "ATLASSIAN"
+#  individual: true
+#  transitions: "111,221"
+#PUC:
+#  url: "https://peek-und-cloppenburg.atlassian.net/"
+#  login: "dmitry.stoilik@intexsoft.by"
+#  oauthToken: "60e0310c75baed67de0ce096baec2f77d668ff6f8bfc79318056a761d615cdef"
+#  customerAccount: "PEL"
+#  idCustomerAccount: "25"
+#  type: "ATLASSIAN"
+#TOPNTOP:
+#  url: "https://topntop.atlassian.net/"
+#  login: "eugene.sarvas@intexsoft.by"
+#  oauthToken: "0d00c32219c6ef5fbeaba9dd0a380f864be7aa43d717cc05ef295ac0a1ba0ecd"
+#  customerAccount: "-"
+#  idCustomerAccount: "-"
+#  type: "ATLASSIAN"
+#CROC(IKriskevich):
+#  url: "https://jira.croc.ru/"
+#  login: "IKriskevich"
+#  oauthToken: "0f88a614b535f6f5ad9c9b34db6bb6eb"
+#  customerAccount: "CRO"
+#  idCustomerAccount: "22"

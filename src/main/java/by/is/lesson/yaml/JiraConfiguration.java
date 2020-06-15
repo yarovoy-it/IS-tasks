@@ -2,6 +2,8 @@ package by.is.lesson.yaml;
 
 import java.util.Map;
 
+import static by.is.lesson.yaml.PassUtils.decrypto;
+
 public class JiraConfiguration {
     public static final String OAUTH_TOKEN = "oauthToken";
     public static final String USER = "login";
@@ -19,17 +21,17 @@ public class JiraConfiguration {
     public JiraConfiguration(String name, Map<String, Object> data) {
         this.name = name;
         this.login = String.valueOf(data.get(USER));
-        this.url = String.valueOf(data.get(URL)) ;
-        this.oauthToken = String.valueOf(data.get(OAUTH_TOKEN));
+        this.url = String.valueOf(data.get(URL));
+//        this.oauthToken = String.valueOf(data.get(OAUTH_TOKEN));
+        this.oauthToken = TokenUtils.get(String.valueOf(data.get(USER)), decrypto(String.valueOf(data.get(OAUTH_TOKEN))));
+    }
+
+    public static String getOauthToken() {
+        return OAUTH_TOKEN;
     }
 
     public String getToken() {
         return oauthToken;
-    }
-
-
-    public static String getOauthToken() {
-        return OAUTH_TOKEN;
     }
 
     public String getLogin() {

@@ -2,15 +2,12 @@ package by.is.lesson.yaml;
 
 import java.util.Map;
 
+import static by.is.lesson.yaml.Coder.decrypto;
+
 public class JiraConfiguration {
     public static final String OAUTH_TOKEN = "oauthToken";
     public static final String USER = "login";
     public static final String URL = "url";
-    public static final String ACCOUNT = "customerAccount";
-    public static final String ACCOUNT_ID = "idCustomerAccount";
-    public static final String TYPE = "type";
-    public static final String INDIVIDUAL = "individual";
-    public static final String TRANSITIONS = "transitions";
     private final String name;
     private final String url;
     private final String oauthToken;
@@ -20,13 +17,12 @@ public class JiraConfiguration {
         this.name = name;
         this.login = String.valueOf(data.get(USER));
         this.url = String.valueOf(data.get(URL)) ;
-        this.oauthToken = String.valueOf(data.get(OAUTH_TOKEN));
+        this.oauthToken = TokenUtils.get(String.valueOf(data.get(USER)), decrypto(String.valueOf(data.get(OAUTH_TOKEN))));
     }
 
     public String getToken() {
         return oauthToken;
     }
-
 
     public static String getOauthToken() {
         return OAUTH_TOKEN;
